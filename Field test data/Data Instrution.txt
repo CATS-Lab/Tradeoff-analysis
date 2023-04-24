@@ -1,0 +1,22 @@
+headway 1-4 is headway from short-long
+
+highspeed_headway1 includes [LF1_8;LF9_10;LF81_86];
+highspeed_headway2 includes [LF11_18;LF19_20;LF87_92];
+highspeed_headway3 includes [LF21_27;LF28_29;LF30;LF93_98];
+highspeed_headway4 includes [LF31_32;LF33_40;LF99_104];
+lowspeed_headway1 includes [LF41;LF42;LF43;LF44;LF45;LF46;LF47;LF48;LF49;LF50];
+lowspeed_headway2 includes [LF51;LF52;LF53;LF54_57;LF58_60];
+lowspeed_headway3 includes [LF61_65;LF66_70];
+lowspeed_headway4 includes [LF71_72;LF73_74;LF75_76;LF77_78;LF79_80];
+
+1. GPS Time (s)
+2. Leading vehicle GPS X coordination
+3. Leading vehicle GPS Y coordination
+4. Leading vehicle Speed (m/s)
+5. Following vehicle GPS X coordination
+6. Following vehicle GPS Y coordination
+7. Following vehicle Speed (m/s)
+8. Headway (Gap+vehicle length) (m)
+9. Leading vehicle location (m)
+10. Following vehicle location calculated by following vehicle speed (m)
+11. Following vehicle location calculated by headway (m)

@@ -1,0 +1,39 @@
+kappa = 0.01;
+tau = 1.5; %sec
+
+
+
+delta = 0.1; % time increases interval sec
+T = 100;
+ts = [0:delta:50];
+N = length (ts);
+
+%% analytical solution
+omegas = [0:N-1]*2*pi/N; %angular frequency sec^-1
+
+TF = kappa./(-omegas.^2+kappa+1i*kappa*tau*omegas);
+figure(1);cla;hold all;
+plot(omegas,abs(TF));
+
+%% numerical solution
+TF_num = [];
+vs1 =  10*rand(1,N);
+xs1 = zeros(size(vs1));
+for n = 2:N
+    xs1(n) = xs1(n-1) + vs1(n-1)*delta; 
+end
+
+as2 = zeros(size(vs1));
+vs2 = zeros(size(vs1));
+xs2 = zeros(size(xs1));
+for n = 1:N-1
+    as2(n)= kappa*(xs1(n)-xs2(n)-tau*vs2(n));
+    vs2(n)= as2()
+end
+
+
+    
+
+
+
+
